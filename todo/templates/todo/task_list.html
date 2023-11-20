@@ -1,0 +1,39 @@
+{% extends "todo/base.html" %}
+
+{% block content %}
+<header class="base-header">
+    <h2>LISTE DES TÂCHES</h2>
+</header>
+<div class="container">
+ 
+    <a href="{% url 'task_create' %}" class="link-style btn btn-primary">Ajouter une nouvelle tâche</a>
+    
+    <ul>
+        {% for task in tasks %}
+        <li>
+            <div class="task-content">
+                {{ task.title }} - {{ task.get_priority_display }}
+                {% if task.completed %} (terminée) {% endif %}
+            </div>
+            <div class="task-actions">
+                <form action="{% url 'task_update' task.id %}" method="post" style="display: inline;">
+                    {% csrf_token %}
+                    <input type="checkbox" name="completed" onchange="this.form.submit()" {% if task.completed %}checked{% endif %}>
+                    <input type="hidden" name="title" value="{{ task.title }}">
+                    <input type="hidden" name="priority" value="{{ task.priority }}">
+                    <button type="submit" style="display: none;">Save</button>
+                </form>
+                
+            </div>
+        </li>
+        <div class="footer">
+            <a href="{% url 'task_update' task.id %}" class="link-style">Modifier</a>
+            <a href="{% url 'task_delete' task.id %}" class="link-style">Supprimer</a>
+        </div>
+        {% endfor %}
+    </ul>
+</div>
+
+<footer class="base-footer">Projet développé par Anaëlle Pollara</footer>
+
+{% endblock %}

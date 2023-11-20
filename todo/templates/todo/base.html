@@ -1,0 +1,18 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}To-Do List{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'todo/styles.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'todo/task_2098402.png' %}">
+    {% block extrahead %}{% endblock %}
+</head>
+<body>
+    {% block content %}{% endblock %}
+
+    
+</body>
+</html>

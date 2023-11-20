@@ -1,0 +1,17 @@
+{% extends "todo/base.html" %}
+
+{% block title %}
+Add/Edit Task
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>{% if form.instance.pk %}MODIFIER{% else %}AJOUTER{% endif %} UNE TÂCHE</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enregistrer</button>
+    </form>
+    {% endblock %}
+</div>
+

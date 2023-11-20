@@ -1,0 +1,16 @@
+{% extends "todo/base.html" %}
+
+{% block title %}
+Delete Task
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Êtes-vous sûr de vouloir supprimer <br> "{{ object.title }}" ?</h2>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirmer</button>
+    </form>
+    {% endblock %}
+</div>
+

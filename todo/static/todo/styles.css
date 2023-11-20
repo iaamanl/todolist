@@ -1,0 +1,166 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #164863;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.base-header {
+    background-color: #164863;
+    color: #fff; 
+    padding: 10px; 
+    text-align: center; 
+}
+
+.base-header h2 {
+    font-size: 24px; 
+    margin: 0; 
+}
+
+
+.container {
+    flex-grow: 1;
+    width: 90%;
+    max-width: 600px; 
+    margin: auto; 
+    padding: 20px;
+    background-color: #427D9D;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2 {
+    color: #DDF2FD;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    background-color: #427D9D;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1.5;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+a, button {
+    color: #06c;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+}
+
+a:hover, button:hover {
+    text-decoration: underline;
+}
+
+form {
+    width: 100%;
+}
+
+label, input, button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input, button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+input[type="submit"], button {
+    background-color: #9BBEC8;
+    color: #fff;
+    border: none;
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: #DDF2FD;
+}
+
+
+.link-style {
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block; 
+    padding: 5px 10px; 
+    background-color: #9BBEC8; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.link-style:hover {
+    text-decoration: none;
+    background-color: #DDF2FD; 
+    color: #fff; 
+}
+
+
+
+.task-content {
+    flex-grow: 1;
+    margin-right: 10px;
+    color: white;
+}
+
+
+.task-actions a, .task-actions button {
+    margin-left: 10px;
+}
+
+.footer {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #427D9D; 
+    text-align: center; 
+    border-top: 1px solid #ddd; 
+}
+
+.base-footer {
+    background-color: #164863; 
+    color: #fff; 
+    text-align: center; 
+    padding: 10px; 
+}
+
